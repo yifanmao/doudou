@@ -1,0 +1,34 @@
+#! /usr/bin/env node
+
+require('../dist/util').printPkgVersion()
+
+const CLI = require('../dist/cli').default
+new CLI().run()
+
+// const program = require('commander') // node.js命令行界面的完整解决方案
+// const shell = require('shelljs') // Nodejs使用ShellJS操作目录文件
+// const chalk = require('chalk') // 添加背景色
+// const inquirer = require('inquirer') //一个用户与命令行交互的工具
+// const pkg = require('../package.json')
+
+// program
+//   .version(pkg.version)
+//   .usage("hao <command>")
+//   .description(pkg.dependencies)
+
+// program
+//   .command('init')
+//   .alias('i')
+//   .description('请选择模版初始化工程')
+//   .action(function() {
+//     console.log('aaa')
+//   })
+
+// program
+//   .on('--help', function() {
+//   console.log('');
+//   console.log('Examples:');
+//   console.log('');
+// })
+
+// program.parse(process.argv)
