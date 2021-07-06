@@ -1,8 +1,7 @@
 const npath = require('path')
 
 const config = {
-  projectName: 'taro-tpl',
-  date: '2021-7-3',
+  projectName: '<%= projectName %>',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,

@@ -1,9 +1,14 @@
 import * as inquirer from 'inquirer'
 import * as fs from 'fs-extra'
+import Project from '../project'
 
 async function fetchTemplate (answers: Record<string, any>) {
-  const { projectName, description, tplType } = answers
-  console.log(projectName, description, tplType)
+  const { projectName, description, template } = answers
+  new Project({
+    projectName,
+    template,
+    description
+  }).create()
 }
 
 async function init () {
@@ -30,7 +35,7 @@ async function init () {
   })
 
   prompts.push({
-    name: 'tplType',
+    name: 'template',
     type: 'list',
     message: '请选择项目模版',
     choices: [
