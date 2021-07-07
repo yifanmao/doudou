@@ -27,7 +27,7 @@ export default class CLI {
     if (command) {
       switch (command) {
         case 'build': {
-          build()
+          build(args)
           break
         }
         case 'init': {
