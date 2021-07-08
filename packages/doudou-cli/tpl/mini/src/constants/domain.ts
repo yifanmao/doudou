@@ -1,6 +1,6 @@
 export default {
   dev: {
-    MAIN: 'https://api.test.com',
+    MAIN: 'https://api.dev.com',
   },
   prod: {
     MAIN: 'https://api.prod.com',

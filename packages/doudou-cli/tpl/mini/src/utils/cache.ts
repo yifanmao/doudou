@@ -1,8 +1,6 @@
 import Taro from '@tarojs/taro'
 
 const cache: {[key: string]: any} = {
-  isLogin: false,
-  launchOptions: {},
   noSuchKey: {},
 }
 

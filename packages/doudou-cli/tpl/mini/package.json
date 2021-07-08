@@ -9,24 +9,8 @@
     "css": "less"
   },
   "scripts": {
-    "build:weapp": "doudou build --type weapp",
-    "build:swan": "doudou build --type swan",
-    "build:alipay": "doudou build --type alipay",
-    "build:tt": "doudou build --type tt",
-    "build:h5": "doudou build --type h5",
-    "build:rn": "doudou build --type rn",
-    "build:qq": "doudou build --type qq",
-    "build:jd": "doudou build --type jd",
-    "build:quickapp": "doudou build --type quickapp",
-    "dev:weapp": "npm run build:weapp -- --watch",
-    "dev:swan": "npm run build:swan -- --watch",
-    "dev:alipay": "npm run build:alipay -- --watch",
-    "dev:tt": "npm run build:tt -- --watch",
-    "dev:h5": "npm run build:h5 -- --watch",
-    "dev:rn": "npm run build:rn -- --watch",
-    "dev:qq": "npm run build:qq -- --watch",
-    "dev:jd": "npm run build:jd -- --watch",
-    "dev:quickapp": "npm run build:quickapp -- --watch"
+    "build:weapp": "doudou build --type weapp --env production",
+    "dev:weapp": "doudou build --type weapp --env development --watch"
   },
   "browserslist": [
     "last 3 versions",

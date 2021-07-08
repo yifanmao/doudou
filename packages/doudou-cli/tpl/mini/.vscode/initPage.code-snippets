@@ -1,0 +1,33 @@
+{
+	"initPage": {
+		"prefix": "initPage",
+		"body": [
+			"import { View } from '@tarojs/components'",
+      "import { useCom } from 'doudou-hooks'",
+			"import Container from '@/components/container'",
+			"import './$TM_FILENAME_BASE.less'",
+			"",
+			"const init: Record<string, any> = {",
+			"	state: {},",
+      "	onLoad() {}",
+			"}",
+      "",
+			"function Index (): JSX.Element {",
+			" ",
+			"  const {state, events, loading, error} = useCom(init)",
+			"",
+			"  return (",
+			"    <Container loading error={error}>",
+			"	    <View className='pages-${TM_DIRECTORY/(.*?)pages\\/(.*?)$/$2/}-${TM_FILENAME_BASE/(.*?)$/${0:/downcase}/}'>",
+			"$2",
+			"	    </View>",
+			"    </Container>",
+			"  )",
+			"}",
+			"",
+			"export default Index",
+			"",
+		],
+		"description": "快速创建taro页面"
+	},
+}

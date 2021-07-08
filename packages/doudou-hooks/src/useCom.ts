@@ -92,8 +92,9 @@ function useEventEnhancement (init: Hooks.useEventEnhancement.init = {}, context
               setLoading({
                 [propName]: false,
               })
-  
-              setError(err)
+              if (err.pageError) {
+                setError(err)
+              }
             })
           })
         }

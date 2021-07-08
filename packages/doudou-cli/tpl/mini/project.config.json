@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "taro-tpl",
+  "projectname": "<%= projectName %>",
   "description": "",
   "appid": "touristappid",
   "setting": {

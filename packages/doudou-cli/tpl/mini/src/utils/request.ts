@@ -10,7 +10,7 @@ function getReqData (options: any): Record<string, any> {
 
 function getReqUrl (options: any): string {
   const url: string = options.url
-  const env = process.env.API_ENV || 'dev'
+  const env = process.env.NODE_ENV || 'dev'
   const domain: string = DOMAIN[env].MAIN
 
   if (/^http/.test(url)) {
@@ -31,7 +31,11 @@ function getReqHeader (): Record<string, any> {
 }
 
 function doLogin () {
-
+  const pages = Taro.getCurrentPages()
+  const currentPath = pages[pages.length - 1].route
+  Taro.redirectTo({
+    url: `/pages/login?redirectUrl=${encodeURIComponent(currentPath)}`
+  })
 }
 
 function requestErr (response: any) {
@@ -70,7 +74,7 @@ function requestSuccess (response: any, options: any): Record<string, any> {
   }
 }
 
-function errorHandler (err: Record<string, any>, options: any): Record<string, any> {
+function errorHandler (err: Record<string, any>, options: any): any {
   // 当请求status不为200时，出错信息的数据会存在两个地方，一个是data里，一个是data同级的字段里
   if (err.data && err.data.errorMessage) {
     // eslint-disable-next-line no-param-reassign
@@ -87,9 +91,13 @@ function errorHandler (err: Record<string, any>, options: any): Record<string, a
   error.msg = err.msg || err.errorMessage || err.errMsg || '服务不可用'
   error.code = err.code || err.status || err.error || -1
   if (options.pageError) {
+    error.pageError = true
     throw error
   } else if (options.proxy) {
-    error.proxy = true
+    Taro.showToast({
+      title: error.msg,
+      icon: 'none',
+    })
     throw error
   } else {
     return {
