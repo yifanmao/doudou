@@ -1,5 +1,5 @@
 import { View, Button } from '@tarojs/components'
-import { useCom } from 'doudou-hooks'
+import { useCom } from 'doudou-taro-hooks'
 import Container from '@/components/container'
 import { getUserInfo } from '@/services/user'
 import './index.less'

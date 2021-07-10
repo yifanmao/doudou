@@ -1,0 +1,45 @@
+{
+  "name": "doudou-taro-hooks",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Jason <yifan.na.mao@gmail.com>",
+  "homepage": "https://github.com/yifanmao/doudou#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.taobao.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yifanmao/doudou.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run prod",
+    "dev": "tsc -w",
+    "prod": "tsc",
+    "clean": "rimraf dist"
+  },
+  "bugs": {
+    "url": "https://github.com/yifanmao/doudou/issues"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "@tarojs/taro": "^3.2.16",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@tarojs/taro": "^3.2.16",
+    "@types/react": "^17.0.13",
+    "@types/vue": "^2.0.0"
+  }
+}
