@@ -3,7 +3,7 @@
 		"prefix": "initCom",
 		"body": [
 			"import { View } from '@tarojs/components'",
-      "import { useCom } from 'doudou-taro-hooks'",
+      "import { useCom } from '@doudou/taro-hooks'",
 			"import './$TM_FILENAME_BASE.less'",
 			"",
 			"const init: Record<string, any> = {",
@@ -30,7 +30,7 @@
 		"prefix": "initComProps",
 		"body": [
 			"import { View } from '@tarojs/components'",
-      "import { useCom } from 'doudou-taro-hooks'",
+      "import { useCom } from '@doudou/taro-hooks'",
 			"import './$TM_FILENAME_BASE.less'",
 			"",
 			"interface IPropsModel {",
