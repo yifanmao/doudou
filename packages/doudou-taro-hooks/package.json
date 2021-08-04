@@ -42,5 +42,6 @@
     "@tarojs/taro": "^3.2.16",
     "@types/react": "^17.0.13",
     "@types/vue": "^2.0.0"
-  }
+  },
+  "gitHead": "cae2764be2103d3f6098b17cfa489763b3779766"
 }
