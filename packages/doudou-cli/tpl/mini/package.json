@@ -20,7 +20,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@doudou/taro-hooks": "1.0.1",
+    "@doua/taro-hooks": "1.0.1",
     "@tarojs/components": "3.1.4",
     "@tarojs/react": "3.1.4",
     "@tarojs/runtime": "3.1.4",

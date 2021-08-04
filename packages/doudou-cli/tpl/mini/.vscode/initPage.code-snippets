@@ -3,7 +3,7 @@
 		"prefix": "initPage",
 		"body": [
 			"import { View } from '@tarojs/components'",
-      "import { useCom } from '@doudou/taro-hooks'",
+      "import { useCom } from '@doua/taro-hooks'",
 			"import Container from '@/components/container'",
 			"import './$TM_FILENAME_BASE.less'",
 			"",
